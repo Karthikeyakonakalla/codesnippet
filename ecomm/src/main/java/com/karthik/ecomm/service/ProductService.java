@@ -14,8 +14,10 @@ public class ProductService {
     private ProductRepository productRepository;
 
     public Product addProduct(Product product) {
+        System.out.println("add product service");
         return productRepository.save(product);
     }
+
     public Optional<Product> findById(Integer id) {
        return productRepository.findById(id);
     }
